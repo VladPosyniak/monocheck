@@ -16,4 +16,9 @@ class Transaction extends BaseDto
     public int $cashbackAmount;
     public int $balance;
     public string $comment;
+
+    public function getAmountText(): string
+    {
+        return abs($this->amount / 100) . ' гривен';
+    }
 }
